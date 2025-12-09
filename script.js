@@ -3,14 +3,14 @@ const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 if (hamburger && navLinks) {
-  
+
   // Toggle menu
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('show');
     hamburger.classList.toggle('open');
   });
 
-  // Auto-close when clicking any nav link
+  // Close menu when clicking a nav link
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('show');
@@ -18,10 +18,18 @@ if (hamburger && navLinks) {
     });
   });
 
-  // Close on clicking outside menu (mobile only)
+  // Close menu when clicking outside
   document.addEventListener('click', (e) => {
-    const clickedInsideNav = navLinks.contains(e.target) || hamburger.contains(e.target);
-    if (!clickedInsideNav && navLinks.classList.contains('show')) {
+    const clickInside = navLinks.contains(e.target) || hamburger.contains(e.target);
+    if (!clickInside) {
+      navLinks.classList.remove('show');
+      hamburger.classList.remove('open');
+    }
+  });
+
+  // Close menu when scrolling
+  window.addEventListener('scroll', () => {
+    if (navLinks.classList.contains('show')) {
       navLinks.classList.remove('show');
       hamburger.classList.remove('open');
     }
