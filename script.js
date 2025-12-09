@@ -1,9 +1,33 @@
-// NAV: hamburger
+// -------------------- NAV: hamburger + auto close --------------------
 const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-});
+const navLinks = document.querySelector('.nav-links');
+
+if (hamburger && navLinks) {
+  
+  // Toggle menu
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+    hamburger.classList.toggle('open');
+  });
+
+  // Auto-close when clicking any nav link
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('show');
+      hamburger.classList.remove('open');
+    });
+  });
+
+  // Close on clicking outside menu (mobile only)
+  document.addEventListener('click', (e) => {
+    const clickedInsideNav = navLinks.contains(e.target) || hamburger.contains(e.target);
+    if (!clickedInsideNav && navLinks.classList.contains('show')) {
+      navLinks.classList.remove('show');
+      hamburger.classList.remove('open');
+    }
+  });
+}
+
 
 // CANVAS: rotating stylized "A" with logo colors (blue + green + yellow + red)
 const canvas = document.getElementById('logoCanvas');
