@@ -1,155 +1,312 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Antolanz Premium Landing</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Antolanz Pvt Ltd — Empowering People</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav>
-  <div class="nav-logo">Antolanz</div>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#founder">Founder</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</nav>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand">antolanz</div>
 
-<!-- HERO -->
-<section id="home" class="hero-section reveal">
-  <canvas id="logo3d"></canvas>
-  <div class="hero-content">
-    <h1>Empowering People, Elevating Ideas.</h1>
-    <p>Your one-stop powerhouse for businesses and startups — transforming ideas into blueprints, pitch decks, development, automation, AI integration, marketing, and growth.</p>
-    <div class="hero-buttons">
-      <a href="#contact" class="glass-button primary">Start Your Project</a>
-      <a href="#services" class="glass-button secondary">View Services</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#founder">Founder</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button id="hamburger" class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- ABOUT -->
-<section id="about" class="section about-section reveal">
-  <h2>About Us</h2>
-  <p>
-    Antolanz is a premium business & technology platform focused on innovation, quality assurance, and automation. We empower startups and established businesses to scale globally by providing end-to-end services from development, testing, reporting, and marketing solutions.
-  </p>
-  <div class="about-vision-mission">
-    <div>
-      <h3>Our Vision</h3>
-      <p>To become a global leader in technology-driven solutions that empower businesses and entrepreneurs to innovate and scale effectively.</p>
-    </div>
-    <div>
-      <h3>Our Mission</h3>
-      <p>Deliver cutting-edge services and solutions, ensuring quality, innovation, and sustainable growth for every client.</p>
-    </div>
-  </div>
-</section>
+  <!-- HERO -->
+  <header id="home" class="hero reveal">
+    <div class="container narrow hero-inner">
+      <canvas id="logoCanvas" width="180" height="180" aria-hidden="true"></canvas>
 
-<!-- SERVICES -->
-<section id="services" class="section services-section reveal">
-  <h2>Our Services</h2>
-  <div class="services-grid">
-    <div class="service-card">Automation</div>
-    <div class="service-card">Business Management</div>
-    <div class="service-card">Risk Management</div>
-    <div class="service-card">Project Reports</div>
-    <div class="service-card">Software Development</div>
-    <div class="service-card">Marketing & Branding</div>
-    <div class="service-card">Quality Assurance</div>
-  </div>
-</section>
+      <div class="hero-text">
+        <h1>Empowering People — Elevating Ideas</h1>
+        <p class="lead">Antolanz is a one-stop powerhouse: idea → blueprint → pitch deck → development → automation → AI integration → growth.</p>
 
-<!-- FOUNDER -->
-<section id="founder" class="section founder-section reveal">
-  <img src="founder.jpg" alt="Founder & CEO" />
-  <h3>Alan Antony</h3>
-  <p>Founder & CEO</p>
-  <p><strong>Vision:</strong> Create a global technology platform empowering entrepreneurs.</p>
-  <p><strong>Mission:</strong> Deliver innovative, scalable, and high-quality business solutions.</p>
-  <button id="viewTeamBtn" class="glass-button primary">View Our Team</button>
-</section>
-
-<!-- TEAM -->
-<section id="team" class="section team-section reveal">
-  <h2>Our Team</h2>
-
-  <!-- Co-Founders -->
-  <div class="team-group">
-    <h3>Co-Founders</h3>
-    <div class="team-members">
-      <div class="team-member">
-        <img src="anix.jpg" alt="Co-Founder" />
-        <h4>Anix K Binoj</h4>
-        <p>Co-founder & COO</p>
-        <p><strong>Vision:</strong> Streamline operations efficiently.</p>
-        <p><strong>Mission:</strong> Ensure smooth execution across projects.</p>
-      </div>
-      <div class="team-member">
-        <img src="sujith.jpg" alt="Co-Founder" />
-        <h4>Sujith Unnithan</h4>
-        <p>Co-founder & Head of DevOps</p>
-        <p><strong>Vision:</strong> Build robust, automated systems.</p>
-        <p><strong>Mission:</strong> Deliver scalable and efficient solutions.</p>
-      </div>
-      <div class="team-member">
-        <img src="aksa.jpg" alt="Co-Founder" />
-        <h4>Aksa Antony</h4>
-        <p>Co-founder & Head of QA</p>
-        <p><strong>Vision:</strong> Ensure top-quality products.</p>
-        <p><strong>Mission:</strong> Maintain high standards in all projects.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">Start Your Project</a>
+          <a class="btn btn-ghost" href="#services">View Services</a>
+        </div>
       </div>
     </div>
-  </div>
+  </header>
 
-  <!-- Project & Marketing Heads -->
-  <div class="team-group">
-    <h3>Project & Marketing Heads</h3>
-    <div class="team-members">
-      <div class="team-member">
-        <img src="devan.jpg" alt="Full Stack" />
-        <h4>Devan Dinesh</h4>
-        <p>Full Stack Developer & Project Manager</p>
-        <p><strong>Vision:</strong> Build scalable software solutions.</p>
-        <p><strong>Mission:</strong> Ensure timely project delivery and client satisfaction.</p>
-      </div>
-      <div class="team-member">
-        <img src="ashin.jpg" alt="Graphics & Marketing" />
-        <h4>Ashin Geo Thomas</h4>
-        <p>Graphics Designer & Digital Marketing Head</p>
-        <p><strong>Vision:</strong> Strengthen brand identity and digital presence.</p>
-        <p><strong>Mission:</strong> Drive marketing campaigns for maximum impact.</p>
+  <!-- ABOUT -->
+  <section id="about" class="section reveal">
+    <div class="container narrow">
+      <h2>About Antolanz</h2>
+      <p class="muted">Antolanz Pvt Ltd combines technology, business strategy and operational excellence to help startups & enterprises scale — from concept to market-ready products and growth.</p>
+
+      <div class="vision-mission">
+        <div class="vm-card">
+          <h3>Our Vision</h3>
+          <p>To become a global technology partner that empowers entrepreneurs to build sustainable, high-impact businesses.</p>
+        </div>
+
+        <div class="vm-card">
+          <h3>Our Mission</h3>
+          <p>Deliver reliable, innovative and quality-first solutions — combining automation, analytics and growth strategies.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section contact-section reveal">
-  <h2>Contact Us</h2>
-  <form class="contact-form">
-    <input type="text" placeholder="Your Name" required />
-    <input type="email" placeholder="Your Email" required />
-    <textarea placeholder="Your Message" required></textarea>
-    <button type="submit" class="glass-button primary">Send Message</button>
-  </form>
-</section>
+  <!-- SERVICES -->
+  <section id="services" class="section reveal">
+    <div class="container">
+      <h2>Services</h2>
+      <div class="services-grid">
+        <div class="service">
+          <div class="service-icon">⚙️</div>
+          <h4>Automation</h4>
+          <p>AI & workflow automation to reduce manual effort and boost accuracy.</p>
+        </div>
 
-<!-- FOOTER -->
-<footer>
-  <p>&copy; 2025 Antolanz Pvt Ltd. All Rights Reserved.</p>
-</footer>
+        <div class="service">
+          <div class="service-icon">📈</div>
+          <h4>Business Management</h4>
+          <p>Strategy, process design and execution to scale operations.</p>
+        </div>
 
-<script src="script.js"></script>
+        <div class="service">
+          <div class="service-icon">🛡️</div>
+          <h4>Risk Management</h4>
+          <p>Identify & mitigate operational and technical risks for projects.</p>
+        </div>
+
+        <div class="service">
+          <div class="service-icon">📄</div>
+          <h4>Project Reports</h4>
+          <p>Professional reports, SOPs and pitch-decks for stakeholders & investors.</p>
+        </div>
+
+        <div class="service">
+          <div class="service-icon">💻</div>
+          <h4>Development</h4>
+          <p>Full-stack development & deployments for web & mobile products.</p>
+        </div>
+
+        <div class="service">
+          <div class="service-icon">📣</div>
+          <h4>Marketing</h4>
+          <p>Growth strategy, digital campaigns and brand building.</p>
+        </div>
+
+        <div class="service">
+          <div class="service-icon">🔬</div>
+          <h4>Quality Assurance</h4>
+          <p>Manual & automated testing to ensure production readiness.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER (Alan) -->
+  <section id="founder" class="section reveal founder-block">
+    <div class="container narrow">
+      <h2>Founder</h2>
+
+      <div class="founder-card">
+        <img src="images/alan_antony.jpg" alt="Alan Antony — Founder & CEO" class="avatar large" />
+        <div class="founder-info">
+          <h3>Alan Antony</h3>
+          <p class="role">Founder & CEO</p>
+          <p class="mv"><strong>Vision:</strong> Create a global technology platform empowering entrepreneurs.</p>
+          <p class="mv"><strong>Mission:</strong> Deliver innovative, scalable and high-quality business solutions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CO-FOUNDERS -->
+  <section id="cofounders" class="section reveal cofounders-block">
+    <div class="container narrow">
+      <h2>Co-Founders</h2>
+      <div class="founders-grid">
+        <div class="person">
+          <img src="images/anix_k_binoj.jpg" alt="Anix K Binoj" class="avatar" />
+          <h4>Anix K Binoj</h4>
+          <p class="role">Co-Founder & COO</p>
+          <p class="mv"><strong>Vision:</strong> Operational excellence & scalable processes.</p>
+        </div>
+
+        <div class="person">
+          <img src="images/aksa_antony.jpg" alt="Aksa Antony" class="avatar" />
+          <h4>Aksa Antony</h4>
+          <p class="role">Co-Founder & Head of QA</p>
+          <p class="mv"><strong>Vision:</strong> Flawless product quality across projects.</p>
+        </div>
+
+        <div class="person">
+          <img src="images/sujith_unnithan.jpg" alt="Sujith Unnithan" class="avatar" />
+          <h4>Sujith Unnithan</h4>
+          <p class="role">Co-Founder & Head of DevOps</p>
+          <p class="mv"><strong>Vision:</strong> Fully automated, reliable infrastructure for scale.</p>
+        </div>
+      </div>
+
+      <div class="center">
+        <button id="showFullTeam" class="btn btn-outline">View Full Team</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL TEAM (hidden until clicked) -->
+  <section id="fullTeam" class="section full-team hidden reveal">
+    <div class="container">
+      <h2>Leadership & Teams</h2>
+
+      <!-- CTO & HR -->
+      <div class="lead-grid">
+        <div class="person highlight">
+          <img src="images/joyal_joseph.jpg" alt="Joyal Joseph — CTO" class="avatar" />
+          <h4>Joyal Joseph</h4>
+          <p class="role">CTO</p>
+          <p class="mv"><strong>Vision:</strong> Lead technical strategy, platforms & architecture.</p>
+        </div>
+
+        <div class="person highlight">
+          <img src="images/mathews_thomas.jpg" alt="Mathews Thomas — Head of HR" class="avatar" />
+          <h4>Mathews Thomas</h4>
+          <p class="role">Head of HR</p>
+          <p class="mv"><strong>Vision:</strong> Build high-performance teams & culture.</p>
+        </div>
+      </div>
+
+      <!-- Project Manager & Full Stack Team -->
+      <div class="team-block">
+        <h3>Project Manager — Full Stack Team</h3>
+
+        <div class="person highlight">
+          <img src="images/devan_dinish.jpg" alt="Devan Dinish — Project Manager" class="avatar" />
+          <h4>Devan Dinish</h4>
+          <p class="role">Project Manager • Full Stack Lead</p>
+          <p class="mv"><strong>Vision:</strong> Deliver reliable products on schedule.</p>
+        </div>
+
+        <div class="members-grid">
+          <div class="person small">
+            <img src="images/ayush_ganesh.jpg" alt="Ayush Ganesh" class="avatar small" />
+            <h5>Ayush Ganesh</h5>
+            <p class="role">Full Stack</p>
+          </div>
+          <div class="person small">
+            <img src="images/irin_ann_shaji.jpg" alt="Irin Ann Shaji" class="avatar small" />
+            <h5>Irin Ann Shaji</h5>
+            <p class="role">Full Stack</p>
+          </div>
+          <div class="person small">
+            <img src="images/sebha_mariyam_george.jpg" alt="Sebha Mariyam George" class="avatar small" />
+            <h5>Sebha Mariyam George</h5>
+            <p class="role">Full Stack</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Digital Marketing & Design -->
+      <div class="team-block">
+        <h3>Head of Digital Marketing — Design Team</h3>
+
+        <div class="person highlight">
+          <img src="images/ashin_geo_thomas.jpg" alt="Ashin Geo Thomas" class="avatar" />
+          <h4>Ashin Geo Thomas</h4>
+          <p class="role">Head of Digital Marketing • Design</p>
+          <p class="mv"><strong>Vision:</strong> Make Antolanz a recognisable global brand.</p>
+        </div>
+
+        <div class="members-grid">
+          <div class="person small">
+            <img src="images/nohin_reji.jpg" alt="Nohin Reji" class="avatar small" />
+            <h5>Nohin Reji</h5>
+            <p class="role">Designer</p>
+          </div>
+          <div class="person small">
+            <img src="images/nijo_p_varghese.jpg" alt="Nijo P Varghese" class="avatar small" />
+            <h5>Nijo P Varghese</h5>
+            <p class="role">Designer</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Analytics & Data Team -->
+      <div class="team-block">
+        <h3>Head of Data Analytics — Data Team</h3>
+
+        <div class="person highlight">
+          <img src="images/ann_grace_mathew.jpg" alt="Ann Grace Mathew" class="avatar" />
+          <h4>Ann Grace Mathew</h4>
+          <p class="role">Head of Data Analytics</p>
+          <p class="mv"><strong>Vision:</strong> Turn data into actionable business intelligence.</p>
+        </div>
+
+        <div class="members-grid">
+          <div class="person small"><img src="images/sachin_biju.jpg" class="avatar small" alt="Sachin Biju"/><h5>Sachin Biju</h5><p class="role">Data Analyst</p></div>
+          <div class="person small"><img src="images/sharon_philip.jpg" class="avatar small" alt="Sharon Philip"/><h5>Sharon Philip</h5><p class="role">Data Analyst</p></div>
+          <div class="person small"><img src="images/alan_roy.jpg" class="avatar small" alt="Alan Roy"/><h5>Alan Roy</h5><p class="role">Data Engineer</p></div>
+          <div class="person small"><img src="images/jesiya_jimson.jpg" class="avatar small" alt="Jesiya Jimson"/><h5>Jesiya Jimson</h5><p class="role">Data Analyst</p></div>
+          <div class="person small"><img src="images/alona_joshy.jpg" class="avatar small" alt="Alona Joshy"/><h5>Alona Joshy</h5><p class="role">Data Analyst</p></div>
+        </div>
+      </div>
+
+      <!-- Sales -->
+      <div class="team-block">
+        <h3>Head of Sales — Sales Team</h3>
+
+        <div class="person highlight">
+          <img src="images/christy_rony.jpg" alt="Christy Rony" class="avatar" />
+          <h4>Christy Rony</h4>
+          <p class="role">Head of Sales</p>
+          <p class="mv"><strong>Vision:</strong> Expand market reach & customer partnerships.</p>
+        </div>
+
+        <div class="members-grid">
+          <div class="person small"><img src="images/sneha_biju.jpg" class="avatar small" alt="Sneha Biju"/><h5>Sneha Biju</h5><p class="role">Sales</p></div>
+          <div class="person small"><img src="images/abiah_shaiju.jpg" class="avatar small" alt="Abiah Shaiju"/><h5>Abiah Shaiju</h5><p class="role">Sales</p></div>
+          <div class="person small"><img src="images/abel_jacob_sibi.jpg" class="avatar small" alt="Abel Jacob Sibi"/><h5>Abel Jacob Sibi</h5><p class="role">Sales</p></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact reveal">
+    <div class="container narrow">
+      <h2>Contact</h2>
+      <p class="muted">Tell us about your project and we'll reach out.</p>
+
+      <form id="contactForm" class="contact-form">
+        <input name="name" placeholder="Full name" required />
+        <input name="email" type="email" placeholder="Email" required />
+        <input name="phone" placeholder="Phone (optional)" />
+        <textarea name="message" placeholder="Project brief" rows="6" required></textarea>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container narrow">
+      <small>© 2025 Antolanz Pvt Ltd — All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
